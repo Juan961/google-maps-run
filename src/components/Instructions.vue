@@ -1,6 +1,6 @@
 <template>
-  <div class="absolute z-50 w-screen h-screen flex justify-center items-center bg-black bg-opacity-25" style="max-height: calc(100vh - 2rem);">
-    <div class="modal relative bg-blue-600 text-white my-4 mx-4 max-h-full rounded px-4 py-4 shadow overflow-auto">
+  <div class="absolute z-50 w-screen h-screen flex justify-center items-center bg-black bg-opacity-25">
+    <div class="modal relative bg-blue-600 text-white my-4 mx-4 max-h-full rounded px-4 py-4 shadow overflow-auto" style="max-height: calc(100vh - 2rem);">
       <h1 class="font-bold text-2xl text-center" >!Bienvenido!</h1>
       <img @click="closeInstructions" class="absolute cursor-pointer" style="top: 10px; right: 10px;" :src="require('../assets/icons/x.svg')" alt="">
       <div>
