@@ -43,8 +43,6 @@ class Bot {
       
       distanceToMark = getDistanceToMark(mark, this.position.x, this.position.y);
 
-      this.distanceToFinish = distanceToMark;
-
       if (distanceToMark < distanceToMove) {
         distanceToMove = distanceToMark;
       }
@@ -52,6 +50,9 @@ class Bot {
       let angle = Math.atan2(mark[1] - this.position.y, mark[0] - this.position.x);
       this.position.x += Math.cos(angle) * distanceToMove;
       this.position.y += Math.sin(angle) * distanceToMove;
+
+      let newDistanceToMark = getDistanceToMark(mark, this.position.x, this.position.y);
+      this.distanceToFinish = newDistanceToMark;
 
       if(this.position.x == mark[0] && this.position.y == mark[1]) {
         isInTheMark = true;
